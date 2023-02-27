@@ -109,3 +109,51 @@ mylist[-1]
 mylist.index(31)
 
 # 列表循环
+# 演示用while和for遍历列表中的所有元素
+def list_while_func(mylist):
+    """
+    使用while循环遍历列表
+    :return: None
+    """
+    index = 0
+    while index < len(mylist):
+        print(mylist[index])
+        index += 1
+
+mylist = ['传智教育', '黑马程序员', 'Python']
+
+def list_for_func(mylist):
+    """
+    使用for循环遍历列表
+    :param mylist:
+    :return: None
+    """
+
+    for words in mylist:
+        print(words)
+
+# 练习：取出列表内的偶数
+mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# for 循环
+
+mylist1 = []
+for num in mylist:
+    if num % 2 == 0:
+        mylist1.append(num)
+print(f"通过for循环，从列表:{mylist}中取出偶数，组成新列表{mylist1}")
+
+# list comprehension
+print(f"通过for循环，从列表:{mylist}中取出偶数，组成新列表{[num for num in mylist if num % 2 == 0 ]}")
+
+# while 循环
+index = 0
+mylist2 = []
+while index < len(mylist):
+    if mylist[index] % 2 == 0:
+        mylist2.append(mylist[index])
+    index += 1
+
+print(f"通过while循环，从列表:{mylist}中取出偶数，组成新列表{mylist2}")
+
+
