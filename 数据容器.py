@@ -157,3 +157,77 @@ while index < len(mylist):
 print(f"通过while循环，从列表:{mylist}中取出偶数，组成新列表{mylist2}")
 
 
+# ---------------------------------------------
+# tuple 元组
+# 不可以修改元素内容， 能存储各种元素
+
+# 定义一个元组
+t1 = (1,'Hello', True)
+print(f't1的类型是{type(t1)},内容是{t1}')
+
+t2 = ()
+t3 = tuple()
+
+print(f't2的类型是{type(t2)}\nt3的类型是{type(t3)}')
+
+# 定义单个元素的元组
+t4 = ('Hello') # 不是元组类型
+t5 = ('Hello', )  # 是元组
+print(f't4的类型是{type(t4)}\nt5的类型是{type(t5)}')
+
+# 元组的嵌套
+t6 = ((1, 2, 3), (4, 5, 6))
+print(f't6的类型是{type(t6)}')
+
+# 下标索引取出元组t6中的元素6
+num = t6[1][2]
+print(num)
+
+# index
+t7 = ('传智教育', '黑马程序员', 'Python')
+print(f'黑马程序员的索引是{t7.index("黑马程序员")}')
+
+# count
+t8 = ('传智教育', '黑马程序员', '黑马程序员', '黑马程序员', '黑马程序员', 'Python')
+print(f'黑马程序员的出现次数是{t8.count("黑马程序员")}')
+
+# len
+t9 = ('传智教育', '黑马程序员', '黑马程序员', '黑马程序员', '黑马程序员', 'Python')
+print(f't8元组中的元素共有{len(t9)}个')
+
+# while 遍历所有元组中的元素
+index = 0
+while index < len(t9):
+    print(f'元组中的元素有{t9[index]}')
+    index += 1
+
+# for 遍历所有元组中的元素
+for i in t9:
+    print(i)
+
+# 元组中的元素不可以修改， 元组中的列表中的元素可以修改
+t10 = (1, 2, ['itcast','itheima'])
+print(f'元组中是:{t10}')
+
+t10[2][1] = '黑马程序员'
+print(f'现在的元组是{t10}')
+
+# 元组练习案例
+t11 = ('周杰伦', 11, ['football', 'music'])
+
+# 查询1其年龄所在的下标位置
+t11.index(11)
+
+# 查询学生姓名
+t11[0]
+
+# 删除学生爱好football
+t11[2].pop(0)
+print(f'现在元组是{t11}')
+
+# 增加爱好coding到list内
+t11[2].append('coding')
+print(f'现在的元组是{t11}')
+
+
+
