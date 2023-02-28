@@ -230,4 +230,58 @@ t11[2].append('coding')
 print(f'现在的元组是{t11}')
 
 
+# ----------------------------------------------------
+# 字符串
+mystr = 'itheima and itcast'
+
+# 通过下标索引取值
+value = mystr[2]
+value2 = mystr[-16]
+
+print(f'从字符串{mystr}中取下标为2的值是{value},取小标为-16的值是{value2}')
+
+# index
+value = mystr.index('and')
+print(f'字符串{mystr}中and的起始下标是{value}')
+
+# replace(str1,str2)  str1： 为被替换的， str2：为新的
+value = mystr.replace('it', '程序')
+print(f'原字符串为{mystr}, 新字符串为{value}')
+
+# split() ---返回的是一个列表
+mystr = 'hello python itcast itheima'
+value = mystr.split(' ')
+print(f'原字符串{mystr}, 现在变为{value}, 类型是{type(value)}')
+
+# strip
+mystr = '  itheima and itcast  '
+new_mystr = mystr.strip()  # 不传入参数，去除首尾空格
+print(f'原字符串{mystr}，长度为{len(mystr)},现在变为{new_mystr},长度为{len(new_mystr)}')
+
+mystr = '12itheima and itcast21'
+new_mystr = mystr.strip('12')
+print(f'原字符串{mystr},现在变为{new_mystr}')
+
+# 统计字符串出现的次数
+mystr = 'itheima and itcast'
+count = mystr.count('it')
+print(f'字符串{mystr}it出现的次数{count}')
+
+# 统计字符串长度
+len(mystr)
+
+# 字符串练习，分割字符串
+mystr = 'itheima itcast boxuegu'
+
+# 统计有多少个it字符
+value = mystr.count('it')
+print(f'字符串{mystr}中有{value}个')
+
+# 空格替换为|
+value = mystr.replace(' ', '|')
+print(f'字符串{mystr}中现在变成{value}')
+
+# 按照|分割，得到列表
+value1 = value.split('|')
+print(f'字符串{mystr}中现在变成{value1}')
 
