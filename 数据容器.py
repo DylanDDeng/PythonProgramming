@@ -285,3 +285,45 @@ print(f'字符串{mystr}中现在变成{value}')
 value1 = value.split('|')
 print(f'字符串{mystr}中现在变成{value1}')
 
+# 数据容器（切片）
+
+# 对list进行切片，从1到4，步长为1
+mylist = [0, 1, 2, 3, 4, 5, 6]
+result = mylist[1:5]
+print(f'结果1：{result}')
+
+# 对tuple进行切片，从头到尾结束，步长为1
+my_tuple = (0, 1, 2, 3, 4, 5, 6)
+result = my_tuple[:]
+print(f'结果2:{result}')
+
+# 对str进行切片，从头到尾结束，步长为2
+mystr = '01234567'
+result = mystr[::2]
+print(f'结果3:{result}')
+
+# 对str进行切片，从头到尾结束，步长为-1
+mystr = '01234567'
+result = mystr[::-1]
+print(f'结果4:{result}')
+
+# 对str进行切片，从3到1结束，步长为-1
+mystr = '01234567'
+result = mystr[3:1:-1]
+print(f'结果4:{result}')
+
+# 对tuple进行切片，从头到尾结束，步长为-2
+my_tuple = (0, 1, 2, 3, 4, 5, 6)
+result = my_tuple[::-2]
+print(f'结果2:{result}')
+
+# 序列的切片实践
+mystr = "万过薪月, 员序程马黑来, nohtyP学"
+
+# 得到 黑马程序员
+result = mystr[::-1][10:15]
+print(f'结果是{result}')
+
+# 方法二得到黑马程序员
+value = mystr.split(" ")[1][4::-1]
+print(f'结果是{value}')
