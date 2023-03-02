@@ -327,3 +327,62 @@ print(f'结果是{result}')
 # 方法二得到黑马程序员
 value = mystr.split(" ")[1][4::-1]
 print(f'结果是{value}')
+
+# 集合 无序，去重
+my_set = {"传智教育", '黑马程序员', 'itheima', "传智教育", '黑马程序员', 'itheima', "传智教育", '黑马程序员', 'itheima'}
+my_set_empty = set()
+print(f'my_set的内容是{my_set}, 类型是{type(my_set)}')
+print(f'my_set的内容是{my_set_empty}, 类型是{type(my_set_empty)}')
+
+# 添加新元素
+my_set.add('Python')
+my_set.add('黑马程序员')
+print(f'my_set的内容是{my_set}')
+
+# 随机取出一个元素
+element = my_set.pop()
+print(f'取出的元素是{element}, 取出后的集合是{my_set}')
+
+# 集合被清空了 clear
+my_set = my_set.clear()
+print(f'集合目前是{my_set}')
+
+# 取差集
+set1 = {1, 2, 3}
+set2 = {1, 5, 6}
+set3 = set1.difference(set2)  # set1中有，set2中没有的元素
+print(set1)
+print(set2)
+print(set3)
+
+# difference_update()
+set1 = {1, 2, 3}
+set2 = {1, 5, 6}
+set1.difference_update(set2)  # 在集合1内删除和集合2内相同的元素, 集合2不变，集合1消除
+print(set1)
+print(set2)
+
+# 2个集合合并为1个
+set1 = {1, 2, 3}
+set2 = {1, 5, 6}
+set3 = set1.union(set2)
+print(set3)
+
+# 统计集合中的元素数量
+set1 = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5}
+print(f'集合内的元素数量为{len(set1)}')
+
+# 集合遍历
+# 集合不支持下标， 所以不能用while循环
+# 可以用for 循环遍历
+set1 = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5}
+for num in set1:
+    print(num)
+
+# 集合练习，信息去重
+my_list = ['黑马程序员', '传智播客', '黑马程序员', '传智播客', 'itheima', 'itcast', 'itheima', 'itcast', 'best']
+
+my_set = set()
+for word in my_list:
+    my_set.add(word)
+print(f'最终得到的集合为{my_set}')
