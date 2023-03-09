@@ -386,3 +386,86 @@ my_set = set()
 for word in my_list:
     my_set.add(word)
 print(f'最终得到的集合为{my_set}')
+
+# 字典
+# 定义空字典
+dict0 = {}
+dict1 = dict()
+# 定义字典
+my_dict = {'王力鸿': 99, '林俊节': 88, '周杰伦': 76}
+
+print(f'字典的内容是{my_dict},类型是{type(my_dict)}')
+print(f'字典的内容是{dict1},类型是{type(dict1)}')
+print(f'字典的内容是{dict0},类型是{type(dict0)}')
+
+# 通过key 取到value， 没有下标索引
+my_dict = {'王力鸿': 99, '林俊节': 88, '周杰伦': 76}
+print(f'王力鸿的考试分数是{my_dict["王力鸿"]}')
+print(f'周杰伦的考试分数是{my_dict["周杰伦"]}')
+
+
+# 字典的嵌套
+stu = {
+    "王力宏": {"语文": 77,
+              "数学": 88,
+              "英语": 99},
+    '林俊杰': {"语文": 80,
+               "数学": 77,
+               "英语": 65},
+    '周杰伦': {"语文": 56,
+               "数学": 67,
+               "英语": 85}
+}
+print(f'学生的考试信息是:{stu}')
+
+# 看周杰伦的语文成绩
+stu1 = stu['周杰伦']['语文']
+print(f'周杰伦的语文成绩是:{stu1}')
+
+# 字典新增值
+my_dict = {'王力鸿': 99, '林俊节': 88, '周杰伦': 76}
+my_dict['张学友'] = 55
+print(f'新增后字典为{my_dict}')
+
+# 更新字典
+my_dict['周杰伦'] = 33
+print(f'更新后字典为{my_dict}')
+
+# 删除元素
+score = my_dict.pop('周杰伦')
+print(f'移除后字典变为{my_dict}, 移除的元素为{score}')
+
+# 清空字典 clear
+my_dict.clear()
+print(f'字典被清空后变为{my_dict}')
+
+# 获取全部的key
+my_dict = {'王力鸿': 99, '林俊节': 88, '周杰伦': 76}
+keys = my_dict.keys()
+print(f'字典的key为{keys}')
+
+# 遍历字典
+for key in my_dict.keys():
+    print(f'字典的key值是{key}')
+    print(f'字典的value是{my_dict[key]}')
+
+# 统计字典的元素数量
+num = len(my_dict)
+print(f'字典中的元素数量:{num}')
+
+
+# 字典小练习
+my_dict = {'王力宏': {'部门': '科技部', '工资': 3000, '级别': 1},
+           '周杰伦': {'部门': '市场部', '工资': 5000, '级别': 2},
+           '林俊杰': {'部门': '市场部', '工资': 7000, '级别': 3},
+           '张学友': {'部门': '科技部', '工资': 4000, '级别': 1},
+           '刘德华': {'部门': '市场部', '工资': 6000, '级别': 2}}
+
+for key1 in my_dict:
+    if my_dict[key1]['级别'] == 1:
+        my_dict[key1]['工资'] += 1000
+        my_dict[key1]['级别'] = 2
+
+print(my_dict)
+
+
