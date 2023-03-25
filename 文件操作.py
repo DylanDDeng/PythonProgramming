@@ -53,6 +53,22 @@ f = open("./word.txt", mode='r', encoding='utf-8')
 content = f.read()
 print(content.count('itheima'))
 
+# 文件的写出
+f = open('./test.txt', 'w', encoding='utf-8')
+f.write('Hello World')  # 将内容写到内存中
+f.flush()  # 将内容写到硬盘中
+f.close()   # 内置flush功能
+
+
+# 文件的追加
+f = open('./test.txt', mode='a', encoding='utf-8')
+f.write('黑马程序员，学python最佳选择')
+f.close()
+
+f.write('\n月薪过万')
+f.flush()
+f.close()
+
 
 
 
