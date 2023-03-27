@@ -6,10 +6,10 @@
 
 # 异常捕获
 try:
-    f = open('./abc.txt', 'r', encoding='utf-8')
+    f = open('08-文件操作/abc.txt', 'r', encoding='utf-8')
 except:
     print('File Not Found')
-    f = open('./abc.txt', 'w', encoding='utf-8')
+    f = open('08-文件操作/abc.txt', 'w', encoding='utf-8')
     f.write('hello')
     f.flush()
     f.close()
@@ -35,7 +35,7 @@ except Exception as e:
 
 # else() 如果没出现异常，需要执行的代码
 try:
-    f = open('./123.txt', 'r')
+    f = open('08-文件操作/123.txt', 'r')
 except Exception as e:
     print('出现异常')
 else:
@@ -51,10 +51,10 @@ else:
 
 # finally() 不管出没出现异常，都要执行的代码
 try:
-    f = open('./123.txt', 'r', encoding='utf-8')
+    f = open('08-文件操作/123.txt', 'r', encoding='utf-8')
 except Exception as e:
     print('出现异常了')
-    f = open('./123.txt', 'w', encoding='utf-8')
+    f = open('08-文件操作/123.txt', 'w', encoding='utf-8')
 else:
     print('好高兴，没有异常')
 finally:
