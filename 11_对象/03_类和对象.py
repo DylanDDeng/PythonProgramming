@@ -14,7 +14,7 @@ class Clock:
 
 clock1 = Clock()
 clock1.id = '02020'
-clock1.price = 30
+clock1.price = 40
 print(f'闹钟id是{clock1.id}, 价格是:{clock1.price}')
 clock1.ring()
 
