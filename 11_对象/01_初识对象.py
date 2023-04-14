@@ -11,7 +11,7 @@ class Student:
     nationality = None
     native_place = None
     age = None
-# 创建一个对象 （类比 打印一张登记表）
+# 创建一个对象 （类比打印一张登记表）
 stu_1 = Student()
 # 对象属性进行赋值（类比 填写表单）
 stu_1 = Student()
