@@ -11,8 +11,8 @@ class Student:
         self.tel = tel
 
         print('Student类创建了一个类对象')
-    def say_hi(self):
-        print(f'大家好，我是{self.name}, 我的年龄是{self.age}, 我的电话是{self.tel}')
+    def say_hi(self, x):
+        print(f'大家好，我是{self.name}, 不是{x}, 我的年龄是{self.age}, 我的电话是{self.tel}')
 
 stu = Student('周杰伦', 35, '20930303')
-stu.say_hi()
+stu.say_hi('林俊杰')
