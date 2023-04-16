@@ -17,6 +17,5 @@ class Phone:
         self._check_5g()
         print("正在通话中")
 
-
 phone = Phone()
 phone.call_by_5g()
