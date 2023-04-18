@@ -32,3 +32,4 @@ my_dict: dict[str, int] = {'itheima': 666}
 
 
 
+
