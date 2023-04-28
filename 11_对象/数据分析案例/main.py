@@ -47,7 +47,7 @@ bar.add_yaxis("销售额", list(data_dict.values()), label_opts=LabelOpts(is_sho
 bar.set_global_opts(
     title_opts=TitleOpts(title="每日销售额")
 )
-
+# 渲染
 bar.render("每日销售额柱状图.html")
 
 

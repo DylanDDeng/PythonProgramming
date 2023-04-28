@@ -5,6 +5,7 @@
 # @software: PyCharm
 """
 数据定义的类
+Record
 """
 class Record:
     def __init__(self, date, order_id, money, province):
