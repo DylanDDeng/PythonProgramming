@@ -50,8 +50,6 @@ class JsonFileReader(FileReader):
             record = Record(data_dict["date"], data_dict['order_id'], int(data_dict['money']), data_dict['province'])
             record_list.append(record)
 
-
-
         f.close()
 
         return record_list

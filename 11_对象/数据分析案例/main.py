@@ -36,7 +36,6 @@ for record in all_data:
     if record.date in data_dict.keys():
         #  当前日期已经有记录了，所以和老记录做累加即可
         data_dict[record.date] += record.money
-
     else:
         data_dict[record.date] = record.money
 
